@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading Screen View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoadingScreenViewController" customModule="DownloadAnimationsPage" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="g6h-px-gkM">
+                                <rect key="frame" x="0.0" y="39" width="414" height="818"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="re1-Ff-xFy" userLabel="Wheel Container View">
+                                <rect key="frame" x="0.0" y="269" width="414" height="358"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheelGrey" translatesAutoresizingMaskIntoConstraints="NO" id="OoK-Pe-UWg" userLabel="Wheel Gray Image View">
+                                        <rect key="frame" x="107" y="79" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="ejW-kt-7no"/>
+                                            <constraint firstAttribute="width" secondItem="OoK-Pe-UWg" secondAttribute="height" multiplier="1:1" id="lo8-GS-ibD"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wheel" translatesAutoresizingMaskIntoConstraints="NO" id="wSb-eT-Lr9" userLabel="Wheel Image View">
+                                        <rect key="frame" x="107" y="79" width="200" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="UJC-AA-OtG"/>
+                                            <constraint firstAttribute="width" secondItem="wSb-eT-Lr9" secondAttribute="height" multiplier="1:1" id="nU7-wn-6lq"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="wSb-eT-Lr9" firstAttribute="centerX" secondItem="re1-Ff-xFy" secondAttribute="centerX" id="DZY-03-pi4"/>
+                                    <constraint firstItem="OoK-Pe-UWg" firstAttribute="centerY" secondItem="re1-Ff-xFy" secondAttribute="centerY" id="HCn-yo-sxx"/>
+                                    <constraint firstItem="OoK-Pe-UWg" firstAttribute="centerX" secondItem="re1-Ff-xFy" secondAttribute="centerX" id="mIS-aT-Pxi"/>
+                                    <constraint firstItem="wSb-eT-Lr9" firstAttribute="centerY" secondItem="re1-Ff-xFy" secondAttribute="centerY" id="xvC-uV-AK9"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nty-Lc-ylM" userLabel="Loading Pourcent Label">
+                                <rect key="frame" x="41.5" y="448" width="331" height="0.0"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chargement ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqa-Ql-wqp" userLabel="Download Label">
+                                <rect key="frame" x="127.5" y="313" width="159" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="159" id="6fe-0s-eyo"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Téléchargement  de données pour une expérience optimale" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06e-lb-Wn7">
+                                <rect key="frame" x="20.5" y="639" width="373" height="38.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nty-Lc-ylM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="0tI-19-Kps"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="g6h-px-gkM" secondAttribute="bottom" constant="5" id="7Or-7i-MEb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g6h-px-gkM" secondAttribute="trailing" id="8Uh-oX-nop"/>
+                            <constraint firstItem="06e-lb-Wn7" firstAttribute="top" secondItem="re1-Ff-xFy" secondAttribute="bottom" constant="12" id="98D-EO-7DR"/>
+                            <constraint firstItem="Nty-Lc-ylM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="IfR-5w-2Zg"/>
+                            <constraint firstItem="pqa-Ql-wqp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="UYK-y6-Ltp"/>
+                            <constraint firstItem="re1-Ff-xFy" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="V4E-GT-Fjf"/>
+                            <constraint firstItem="re1-Ff-xFy" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="YI5-bM-mU9"/>
+                            <constraint firstItem="Nty-Lc-ylM" firstAttribute="centerY" secondItem="re1-Ff-xFy" secondAttribute="centerY" id="fzJ-Kh-lcR"/>
+                            <constraint firstItem="re1-Ff-xFy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hM6-ew-Yjo"/>
+                            <constraint firstItem="wSb-eT-Lr9" firstAttribute="top" secondItem="pqa-Ql-wqp" secondAttribute="bottom" constant="8" id="kfn-Tf-am2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="g6h-px-gkM" secondAttribute="top" constant="5" id="mOg-RF-Ce3"/>
+                            <constraint firstItem="re1-Ff-xFy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pNm-yw-g1L"/>
+                            <constraint firstItem="06e-lb-Wn7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ph7-to-ZQg"/>
+                            <constraint firstItem="06e-lb-Wn7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.9" id="vpD-Ty-2kR"/>
+                            <constraint firstItem="g6h-px-gkM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zeF-0b-5Mc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="downloadInformationLabel" destination="06e-lb-Wn7" id="nMY-id-6NP"/>
+                        <outlet property="downloadLabel" destination="pqa-Ql-wqp" id="f0A-by-YYZ"/>
+                        <outlet property="loadingPourcentLabel" destination="Nty-Lc-ylM" id="zDL-vK-Ff3"/>
+                        <outlet property="wheelContainerView" destination="re1-Ff-xFy" id="FAY-CL-RDY"/>
+                        <outlet property="wheelGrayImageView" destination="OoK-Pe-UWg" id="sQX-FJ-GQp"/>
+                        <outlet property="wheelImageView" destination="wSb-eT-Lr9" id="0JI-pG-Nte"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backgroundImage" width="205.33332824707031" height="375"/>
+        <image name="wheel" width="910" height="910"/>
+        <image name="wheelGrey" width="918" height="918"/>
+    </resources>
+</document>
