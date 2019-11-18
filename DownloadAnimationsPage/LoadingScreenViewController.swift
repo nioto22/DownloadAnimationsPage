@@ -58,6 +58,7 @@ class LoadingScreenViewController: UIViewController {
             timer?.invalidate()
             timer = nil
             stopBackgroundAnimations()
+            loadingPourcentLabel.text = "100%"
             downloadInformationLabel.text = "Téléchargement fini !!"
         } else {
             startTimer()
